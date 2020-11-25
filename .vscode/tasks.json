@@ -1,0 +1,33 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Rust: cargo check - neural_staring",
+			"type": "cargo",
+			"subcommand": "check",
+			"problemMatcher": [
+				"$rustc"
+			],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+		},
+		{
+			"label": "Rust: cargo build - neural_staring",
+			"type": "cargo",
+			"subcommand": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+		},
+		{
+			"label": "Rust: cargo run - neural_staring",
+			"type": "cargo",
+			"subcommand": "run",
+			"problemMatcher": [
+				"$rustc"
+			],
+		}
+	]
+}

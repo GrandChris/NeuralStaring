@@ -7,7 +7,7 @@ FROM ubuntu:groovy
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends --reinstall ca-certificates \
-    && apt-get -y install --no-install-recommends git build-essential curl locate
+    && apt-get -y install --no-install-recommends git build-essential gdb curl locate
     
 # Get Rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
