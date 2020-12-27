@@ -14,9 +14,10 @@ RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-RUN rustup component add rust-analysis --toolchain stable-x86_64-unknown-linux-gnu \
-    && rustup component add rust-src --toolchain stable-x86_64-unknown-linux-gnu \
-    && rustup component add rls --toolchain stable-x86_64-unknown-linux-gnu
+RUN rustup default nightly \
+    && rustup component add rust-analysis --toolchain nightly-x86_64-unknown-linux-gnu \
+    && rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu \
+    && rustup component add rls --toolchain nightly-x86_64-unknown-linux-gnu
 
 RUN updatedb
 
